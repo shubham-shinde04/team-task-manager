@@ -22,3 +22,9 @@ app.listen(PORT, () => console.log(`Server on port ${PORT}`));
 const userRoutes = require("./routes/userRoutes");
 
 app.use("/api/users", userRoutes);
+
+const cors = require("cors");
+
+app.use(cors({
+  origin: "*"
+}));
